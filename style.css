@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Lobster&display=swap");
+
+/* || Variable || */
+
+:root {
+  --COLOR-BOX-SHADOW: #eee;
+  --COLOR-SOCIAL: #000;
+  --COLOR-FONT: #000;
+  --COLOR-CLOSE-FONT: #fff;
+  --COLOR-HOVER-FONT: #fff;
+  --BACKGROUND-COLOR-BODY: #05545e;
+  --BACKGROUND-COLOR-HEADER-FOOTER: #fcd34d;
+  --BACKGROUND-COLOR-BOX: #fef3c7;
+  --BACKGROUND-COLOR-CLOSE: #f43f5e;
+  --BACKGROUND-COLOR-SOCIAL-HOVER: #808080;
+  --BODY-LINEAR-GRADIENT: #05545e 16%, #bbbbbb 91.1%;
+  --BUTTON-LINEAR-GRADIENT: #f09819 0%, #edde5d 51%, #f09819 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style body */
+
+body {
+  background-color: #05545e;
+  background: linear-gradient(to right top, var(--BODY-LINEAR-GRADIENT))
+    no-repeat center center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Style header */
+
+header {
+  text-align: center;
+  padding: 0.5rem 0;
+  color: var(--COLOR-FONT);
+  background-color: var(--BACKGROUND-COLOR-HEADER-FOOTER);
+  box-shadow: 0 1px 2px var(--COLOR-BOX-SHADOW);
+  font-family: "Berkshire Swash", serif;
+}
+
+/* Style main */
+
+main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.box {
+  height: 35vw;
+  width: 70vw;
+}
+
+.box-container {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 2px 3px var(--COLOR-BOX-SHADOW);
+  position: relative;
+  background-color: var(--BACKGROUND-COLOR-BOX);
+  display: none;
+}
+
+i.fa-xmark {
+  padding: 3px 4px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--BACKGROUND-COLOR-CLOSE);
+  color: var(--COLOR-CLOSE-FONT);
+}
+
+#random-joke {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  overflow: auto;
+  scrollbar-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#random-joke::-webkit-scrollbar {
+  display: none;
+}
+
+.btn {
+  display: flex;
+  align-self: center;
+}
+
+#random-joke-btn {
+  background-image: linear-gradient(to right, var(--BUTTON-LINEAR-GRADIENT));
+  margin: 10px;
+  padding: 15px 60px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: var(--COLOR-FONT);
+  box-shadow: 0 0 3px var(--COLOR-BOX-SHADOW);
+  border: none;
+  display: block;
+  white-space: nowrap;
+}
+
+#random-joke-btn:hover {
+  background-position: right center;
+  color: var(--COLOR-HOVER-FONT);
+  text-decoration: none;
+}
+
+/* Style footer */
+
+footer {
+  height: 5rem;
+  padding: 0 1rem;
+  background-color: var(--BACKGROUND-COLOR-HEADER-FOOTER);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  opacity: 0.5;
+}
+
+.social-link {
+  font-size: 1.5rem;
+  display: flex;
+}
+
+.social {
+  color: var(--COLOR-SOCIAL);
+  padding: 6px 9px;
+  border-radius: 5px;
+}
+
+/* ||  Responsive Design || */
+
+/* sm */
+@media screen and (min-width: 640px) {
+  .box {
+    height: 13rem;
+    width: 25rem;
+  }
+
+  .box-container {
+    padding: 26px;
+  }
+
+  i.fa-xmark {
+    background-color: transparent;
+    color: var(--COLOR-FONT);
+    padding: 5px 7px;
+  }
+
+  i.fa-xmark:hover {
+    background-color: var(--BACKGROUND-COLOR-CLOSE);
+    color: var(--COLOR-CLOSE-FONT);
+  }
+
+  .social:hover {
+    background-color: var(--BACKGROUND-COLOR-SOCIAL-HOVER);
+  }
+}
+
+/* md */
+
+@media screen and (min-width: 768px) {
+  .box {
+    height: 14rem;
+    width: 27rem;
+  }
+
+  #random-joke {
+    font-size: 1.2rem;
+  }
+}
+
+/* lg */
+
+@media screen and (min-width: 1024px) {
+  .box {
+    height: 16rem;
+    width: 30rem;
+  }
+}
+
+/* xl */
+
+@media screen and (min-width: 1280px) {
+  .box {
+    height: 18rem;
+    width: 32rem;
+  }
+
+  #random-joke {
+    font-size: 1.3rem;
+  }
+}
+
+/* 2xl */
+
+@media screen and (min-width: 1536px) {
+  .box {
+    height: 18rem;
+    width: 33rem;
+  }
+}
+
+/* Mobile Landscape */
+
+@media screen and (max-height: 430px) and (min-aspect-ratio: 7/4) {
+  body {
+    height: 150vh;
+  }
+
+  i.fa-xmark {
+    background-color: var(--BACKGROUND-COLOR-CLOSE);
+    color: var(--COLOR-CLOSE-FONT);
+  }
+}
