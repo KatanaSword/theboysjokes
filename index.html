@@ -1,41 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="auther" content="Saurabh Tajane"/>
-        <meta name="description" content="This page is about random jokes"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Jokes</title>
-        <!-- Style link -->
-        <link rel="stylesheet" href="style.css"/>
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-    </head>
-    <body>
-        <header>
-            <h1 clas="main-heading"></h1>Jokes</h1>
-        </header>
-        <main>
-            <div class="box-container">
-                <p id="random-joke"></p>
-                <i class="fa-solid fa-xmark"></i>
-            </div>
-            <div class="btn">
-                <button id="random-joke-btn">LOL</button>
-            </div>
-        </main>
-        <footer>
-            <div class="copyright">
-                <p>Copyright &copy; Jokes.</p>
-            </div>
-            <div class="social">
-                <a><i class="fa-brands fa-github"></i></a>
-                <a><i class="fa-brands fa-instagram"></i></a>
-                <a><i class="fa-brands fa-x-twitter"></i></a>
-                <a><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-        </footer>
-        <!-- javaScript link -->
-        <script src="app.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="auther" content="Saurabh Tajane" />
+    <meta name="description" content="This page is about random jokes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokes</title>
+    <!-- Style link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Favicon -->
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="./images/icons8-scared-face-meme-bubbles-16.png"
+    />
+    <link
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
+      href="./images/icons8-scared-face-meme-bubbles-32.png"
+    />
+    <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="./images/icons8-scared-face-meme-bubbles-96.png"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 clas="main-heading">Jokes</h1>
+    </header>
+    <main>
+      <div class="box">
+        <div class="box-container">
+          <i class="fa-solid fa-xmark"></i>
+          <div id="random-joke"></div>
+        </div>
+      </div>
+      <div class="btn">
+        <button id="random-joke-btn">LOL😂</button>
+      </div>
+    </main>
+    <footer>
+      <div class="copyright">
+        <p><small>Copyright &copy; Jokes.</small></p>
+      </div>
+      <div class="social-link">
+        <a
+          class="social"
+          target="_blank"
+          href="https://github.com/KatanaSword/jokes"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          class="social"
+          target="_blank"
+          href="https://www.instagram.com/saurabhtajane/"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          class="social"
+          target="_blank"
+          href="https://twitter.com/SaurabhTajane6"
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a
+          class="social"
+          target="_blank"
+          href="https://www.linkedin.com/in/saurabh-tajane-178284226/"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </footer>
+    <!-- javaScript link -->
+    <script src="app.js"></script>
+  </body>
 </html>
